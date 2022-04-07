@@ -336,13 +336,82 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Merfolk",
+            "source": "TeyasGuidetoAile",
+            "page": "0",
+            "ability": [
+                {
+                    "con": 2
+                }
+            ],
+            "size": ["M"],
+            "speed": 30,
+            "traitTags": [
+                "Amphibious",
+                "Blindsight",
+                "Improved Resting",
+                "Monstrous Race"
+            ],
+            "languageProficiencies": [
+                {
+                    "common": true,
+                    "other": true
+                }
+            ],
+            "skillProficiencies": [
+                {
+                    "survival": true
+                }
+            ],
+            "entries": [
+                {
+                    "type": "entries",
+                    "name": "Age",
+                    "entries": [
+                        "Merfolk reach adulthood in their late teans, but exact lifespans are closely guarded secrets"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Size",
+                    "entries": [
+                        "Most merfolk are about the same size as humans, but it is not unusual for a merfolk to be slighly taller"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Shifting",
+                    "entries": [
+                        "When a merfolk is outside of water they are near indestinguishable from a human, the most obvious differences being their tendancy towards green hair and the gills on their necks (Often confused for scars",
+                        "Upon entering water they transform into their true form. This form appears to be a human torso with a fish-like tail. Some merfolk in their Mer form have green or blue tinted skin, webbed fingers, or other features",
+                        "While in this form they have a swim speed equal to twice their walking speed, They do not require air so long as the water supports fish life, they have blindsight (but only against targets also within water) up to 120 ft",
+                        "When in water they do not become incapacitated while sleeping"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Difficult Upbringing",
+                    "entries": [
+                        "You are proficient in the {@skill Survival} skill"
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Languages",
+                    "entries": [
+                        "You can speak, read, and write Common and Merfolk. Merfolk is a language that can only be spoken while in water and is extremely difficult for non Mer to hear"
+                    ]
+                }
+            ]
         }
     ],
     "subrace": [
         {
             "name": "Succubi",
             "source": "TeyasGuidetoAile",
-            "page": 21,
+            "page": 0,
             "size": [
                 "M"
             ],
@@ -460,7 +529,7 @@
     "monster": [
         {
 	        "name": "Mango the landshark",
-	        "size": "L",
+	        "size": ["L"],
 	        "type": "beast",
 	        "source": "TeyasGuidetoAile",
 	        "alignment": [
@@ -549,7 +618,7 @@
             "name": "Swarm of Wasps (CR 30)",
             "source": "TeyasGuidetoAile",
             "page": 0,
-            "size": "L",
+            "size": ["L"],
             "type": {
                 "type": "beast",
                 "swarmSize": "T"
@@ -656,6 +725,141 @@
                             }
                         ]
                     }
+                ]
+            }
+        },
+        {
+            "name": "Arachne",
+            "size": ["L"],
+            "type": "monstrosity",
+            "source": "TeyasGuidetoAile",
+            "alignment": [
+                "A"
+            ],
+            "ac": [
+                {
+                    "ac": 18,
+                    "from": [
+                        "Exoskeleton"
+                    ]
+                }
+            ],
+            "hp": {
+                "formula": "3d10 + 6",
+                "average": 22
+            },
+            "speed": {
+                "walk": 40,
+                "climb": 40
+            },
+            "str": 15,
+            "dex": 20,
+            "con": 15,
+            "int": 13,
+            "wis": 13,
+            "cha": 17,
+            "passive": 15,
+            "cr": "5",
+            "senses": [
+                "tremorsense"
+            ],
+            "senseTags": [
+                "T"
+            ],
+            "languages": [
+                "Common",
+                "Arachnid"
+            ],
+            "languageTags": [
+                "C"
+            ],
+            "skill": {
+                "acrobatics": "+9",
+                "sleight of hand": "+9",
+                "perception": "+5",
+                "persuasion": "+5",
+                "stealth": "+7"
+            },
+            "vulnerable": [
+                "fire"
+            ],
+            "resist": [
+                "cold"
+            ],
+            "immune": [
+                "slashing"
+            ],
+            "conditionImmune": [
+                "charmed",
+                "poisoned",
+                "prone"
+            ],
+            "trait": [
+                {
+                    "name": "Spider Climb",
+                    "entries": [
+                        "The arachne can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+                    ]
+                },
+                {
+                    "name": "Sturdy Webs",
+                    "entries": [
+                        "The arachne can climb webbing it has created. Additionally while the Arachne is on a web it has Tremorsense covering the entire surface of the web"
+                    ]
+                }
+            ],
+            "traitTags": [
+                "Spider Climb"
+            ],
+            "action": [
+                {
+                    "name": "Multistrike",
+                    "entries": [
+                        "The arachne can make a Web Shot Attack, and then 2 Claw Attacks."
+                    ]
+                },
+                {
+                    "name": "Web Shot",
+                    "entries": [
+                        "{@atk rw} {@hit 7} to hit, range 90/120 ft., one target. {@h}18 ({@damage 2d8 + 9}) bludgeoning damage. Target must make a Dexterity Saving Throw, On a Failed Save the target is {@condition restrained} until an ally frees them. The webbing has 1 hp and an AC of 10. Instead of attacking the Arachne can fire it's webbing at the world to create a climbable web. This web counts as Difficult Terrain and Requires Climbing no matter what direction it is pointing"
+                    ]
+                },
+                {
+                    "name": "Claw",
+                    "entries": [
+                        "{@atk mw} {@hit 4} to hit, reach 10 ft., one target. {@h}11 ({@damage 2d8 + 2}) slashing damage."
+                    ]
+                }
+            ],
+            "damageTags": [
+                "B",
+                "S"
+            ],
+            "miscTags": [
+                "RW",
+                "MW",
+                "RCH"
+            ],
+            "conditionInflict": [
+                "restrained"
+            ],
+            "bonus": [
+                {
+                    "name": "Wrap",
+                    "entries": [
+                        "If a target that is {@condition restrained} due to the Arachne's webbing get's within 5ft of the Arachne, It can Wrap the target entirely in webbing. The target is then {@condition blinded}, {@condition incapacitated}, and incapable of verbal speech until freed. The Wrapping has an HP of 5 and an AC of 20, Additionally the Wrapping is immune to Bludgeoning and Magical Damage."
+                    ]
+                }
+            ],
+            "environment": [
+                "forest",
+                "hill",
+                "mountain",
+                "urban"
+            ],
+            "fluff": {
+                "entries": [
+                    "An Arachne looks like a Giant Spider with a Human Upper body starting from where the Head would be. Male Arachne are extremely rare, so much so that we aren't even sure they exist. Arachne Silk is extremely strong and doesn't burn as easily as normal spider silk"
                 ]
             }
         }
@@ -851,7 +1055,26 @@
             "type": "OTH",
             "rarity": "artifact",
             "entries": [
-            "When this Wax is used to seal a letter, The wax Protects the letter from All Divination Magic, If the sealed letter is a magic item {@spell identify} will see it as a mundane item with a minor abjuration aura while it is still sealed, Additionally if you think of a person while sealing the letter, Only that person can open the letter by any means until the seal is broken"
+                "When this Wax is used to seal a letter, The wax Protects the letter from All Divination Magic, If the sealed letter is a magic item {@spell identify} will see it as a mundane item with a minor abjuration aura while it is still sealed, Additionally if you think of a person while sealing the letter, Only that person can open the letter by any means until the seal is broken"
+            ]
+        },
+        {
+            "name": "Cursed Ring of Alignment",
+            "source": "TeyasGuideToAile",
+            "page": 0,
+            "type": "RG",
+            "rarity": "artifact",
+            "curse": true,
+            "entries": [
+                "This item comes in 10 variants",
+                "If you have multiple of the rings they only take o",
+                {
+                    "name": "Ring Of Lawful Good",
+                    "type": "entries",
+                    "entries": [
+                        "Shifts your alignment to be Lawfully Good Aligned"
+                    ]
+                }
             ]
         }
     ],
